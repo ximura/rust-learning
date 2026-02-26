@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug rwc",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--manifest-path",
+                    "${workspaceFolder}/cli-tools-workspace/Cargo.toml",
+                    "-p",
+                    "rwc"
+                ],
+                "filter": {
+                    "name": "rwc",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "sample.txt"
+            ],
+            "cwd": "${workspaceFolder}/cli-tools-workspace",
+            "env": {
+                "RUST_BACKTRACE": "1"
+            }
+        }
+    ]
+}
